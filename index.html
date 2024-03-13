@@ -24,6 +24,19 @@
     deploymentId: '81044a08-c6a8-41fb-b36f-59e45182eddb'
   });
 </script>
+  <script>
+  (function(a,t,c,l,o,u,d){a['_genesysJourneySdk']=o;a[o]=a[o]||function(){
+  (a[o].q=a[o].q||[]).push(arguments)},a[o].l=1*new Date();u=t.createElement(c),
+  d=t.getElementsByTagName(c)[0];u.async=1;u.src=l;u.charset='utf-8';d.parentNode.insertBefore(u,d)
+  })(window, document, 'script', 'https://apps.mypurecloud.de/journey/sdk/js/web/v1/ac.js', 'ac');
+  ac('init', '996b4b1c-a0e7-414b-a1b3-2d59b34eab41', { region: 'euc1' });
+  ac('pageview');
+  setTimeout(function() {
+
+  Genesys("command", "Journey.record", { eventName: "timeout-30s"});
+
+}, 30000);
+</script>
   <div id="genesys-support-center"></div>
   <div>
 </div>
